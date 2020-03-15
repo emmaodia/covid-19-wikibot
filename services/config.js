@@ -20,6 +20,7 @@ const ENV_VARS = [
   "PAGE_ACCESS_TOKEN",
   "APP_SECRET",
   "VERIFY_TOKEN",
+  "YOU_TUBE_WASH_HANDS",
   "APP_URL",
   "SHOP_URL"
 ];
@@ -35,6 +36,8 @@ module.exports = {
   pageAccesToken: process.env.PAGE_ACCESS_TOKEN,
   appSecret: process.env.APP_SECRET,
   verifyToken: process.env.VERIFY_TOKEN,
+
+  youtubeWashHands: process.env.YOU_TUBE_WASH_HANDS,
 
   // URL of your app domain
   appUrl: process.env.APP_URL,
@@ -115,7 +118,7 @@ module.exports = {
   },
 
   get whitelistedDomains() {
-    return [this.appUrl, this.shopUrl];
+    return [this.youtubeWashHands, this.appUrl, this.shopUrl];
   },
 
   checkEnvVariables: function() {
@@ -124,7 +127,7 @@ module.exports = {
         console.log("WARNING: Missing the environment variable " + key);
       } else {
         // Check that urls use https
-        if (["APP_URL", "SHOP_URL"].includes(key)) {
+        if (["YOU_TUBE_WASH_HANDS", "APP_URL", "SHOP_URL"].includes(key)) {
           const url = process.env[key];
           if (!url.startsWith("https://")) {
             console.log(
