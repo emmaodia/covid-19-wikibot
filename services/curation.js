@@ -34,7 +34,8 @@ module.exports = class Curation {
               // userFirstName: this.user.firstName,
               // agentFirstName: config.personaOrder.name,
               // topic: i18n.__("care.order")
-            }),
+            })
+            ),
           Response.genQuickReply(i18n.__("curation.show"), [
             {
               title: i18n.__("curation.wash hands"),
@@ -44,7 +45,7 @@ module.exports = class Curation {
               title: i18n.__("curation.distance"),
               payload: "CURATION_SOMEONE_ELSE"
             }
-          ])
+          ]),
         ]
         break;
 
