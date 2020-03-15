@@ -79,21 +79,27 @@ module.exports = class Care {
       case "CARE_BILLING":
         // Send using the Persona for billing issues
 
-        response = [
-          Response.genTextWithPersona(
+        response =
+          Response.genQuickReply(
             i18n.__("care.symptoms-19", {
               // userFirstName: this.user.firstName,
               // agentFirstName: config.personaBilling.name,
               // topic: i18n.__("care.billing")
             }),
+            [
+              {
+                title: i18n.__("care.other"),
+                payload: "CARE_OTHER"
+              }
+            ]
             //config.personaBilling.id
-          ),
+          );
           // Response.genTextWithPersona(
           //   i18n.__("care.end"),
           //   config.personaBilling.id
           // ),
           // Survey.genAgentRating(config.personaBilling.name)
-        ];
+        
         break;
 
       case "CARE_SALES":
@@ -118,20 +124,25 @@ module.exports = class Care {
       case "CARE_OTHER":
         // Send using the Persona for customer care issues
 
-        response = [
-          Response.genTextWithPersona(
+        response = 
+          Response.genQuickReply(
             i18n.__("curation.prompt", {
               // userFirstName: this.user.firstName,
               // agentFirstName: config.personaCare.name
             }),
+            [
+              {
+                title: i18n.__("curation.price"),
+                payload: "Learn More"
+              }
+            ]
             // config.personaCare.id
-          ),
+          );
           // Response.genTextWithPersona(
           //   i18n.__("care.end"),
           //   config.personaCare.id
           // ),
           // Survey.genAgentRating(config.personaCare.name)
-        ];
         break;
     }
 
