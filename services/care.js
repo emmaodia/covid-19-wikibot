@@ -53,17 +53,17 @@ module.exports = class Care {
         response = [
           Response.genTextWithPersona(
             i18n.__("care.covid-19", {
-              userFirstName: this.user.firstName,
+              //userFirstName: this.user.firstName,
               //agentFirstName: config.personaOrder.name,
-              topic: i18n.__("care.order")
+              //topic: i18n.__("care.order")
             }),
-            config.personaOrder.id
+            //config.personaOrder.id
           ),
-          Response.genTextWithPersona(
-            i18n.__("care.end"),
-            config.personaOrder.id
-          ),
-          Survey.genAgentRating(config.personaOrder.name)
+          // Response.genTextWithPersona(
+          //   i18n.__("care.end"),
+          //   config.personaOrder.id
+          // ),
+          // Survey.genAgentRating(config.personaOrder.name)
         ];
         break;
 
@@ -72,18 +72,18 @@ module.exports = class Care {
 
         response = [
           Response.genTextWithPersona(
-            i18n.__("care.issue", {
-              userFirstName: this.user.firstName,
-              agentFirstName: config.personaBilling.name,
-              topic: i18n.__("care.billing")
+            i18n.__("care.symptoms-19", {
+              // userFirstName: this.user.firstName,
+              // agentFirstName: config.personaBilling.name,
+              // topic: i18n.__("care.billing")
             }),
-            config.personaBilling.id
+            //config.personaBilling.id
           ),
-          Response.genTextWithPersona(
-            i18n.__("care.end"),
-            config.personaBilling.id
-          ),
-          Survey.genAgentRating(config.personaBilling.name)
+          // Response.genTextWithPersona(
+          //   i18n.__("care.end"),
+          //   config.personaBilling.id
+          // ),
+          // Survey.genAgentRating(config.personaBilling.name)
         ];
         break;
 
@@ -111,17 +111,17 @@ module.exports = class Care {
 
         response = [
           Response.genTextWithPersona(
-            i18n.__("care.default", {
-              userFirstName: this.user.firstName,
-              agentFirstName: config.personaCare.name
+            i18n.__("curation.prompt", {
+              // userFirstName: this.user.firstName,
+              // agentFirstName: config.personaCare.name
             }),
-            config.personaCare.id
+            // config.personaCare.id
           ),
-          Response.genTextWithPersona(
-            i18n.__("care.end"),
-            config.personaCare.id
-          ),
-          Survey.genAgentRating(config.personaCare.name)
+          // Response.genTextWithPersona(
+          //   i18n.__("care.end"),
+          //   config.personaCare.id
+          // ),
+          // Survey.genAgentRating(config.personaCare.name)
         ];
         break;
     }
