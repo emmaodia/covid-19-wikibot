@@ -52,9 +52,9 @@ module.exports = class Care {
 
         response = [
           Response.genTextWithPersona(
-            i18n.__("care.issue", {
+            i18n.__("care.covid-19", {
               userFirstName: this.user.firstName,
-              agentFirstName: config.personaOrder.name,
+              //agentFirstName: config.personaOrder.name,
               topic: i18n.__("care.order")
             }),
             config.personaOrder.id
