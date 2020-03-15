@@ -50,8 +50,8 @@ module.exports = class Care {
       case "CARE_ORDER":
         // Send using the Persona for order issues
 
-        response = [
-          Response.genTextWithPersona(
+        response =
+          Response.genQuickReply(
             i18n.__("care.covid-19", {
               //userFirstName: this.user.firstName,
               //agentFirstName: config.personaOrder.name,
@@ -68,13 +68,12 @@ module.exports = class Care {
               }
             ]
             //config.personaOrder.id
-          ),
+          );
           // Response.genTextWithPersona(
           //   i18n.__("care.end"),
           //   config.personaOrder.id
           // ),
           // Survey.genAgentRating(config.personaOrder.name)
-        ];
         break;
 
       case "CARE_BILLING":
