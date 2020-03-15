@@ -36,9 +36,15 @@ module.exports = class Curation {
               // topic: i18n.__("care.order")
             })
             ),
+          Response.genGenericTemplate(
+            `${config.appUrl}/styles/hand-washing-who.jpg`,
+            i18n.__("curation.wash-hands"),
+            // i18n.__("curation.subtitle"),
+            // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
+          ),  
           Response.genQuickReply(i18n.__("curation.show"), [
             {
-              title: i18n.__("curation.wash hands"),
+              title: i18n.__("curation.wash-hands"),
               payload: "CURATION_FOR_ME"
             },
             {
