@@ -41,16 +41,16 @@ module.exports = class Curation {
             i18n.__("curation.wash-hands"),
             // i18n.__("curation.subtitle"),
             // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
-            // [
-            //   Response.genWebUrlButton(
-            //     i18n.__("curation.wash-hands-subtitle"),
-            //     `https://www.youtube.com/watch?v=y7e8nM0JAz0`
-            //   ),
-            //   Response.genPostbackButton(
-            //     i18n.__("curation.show"),
-            //     "CURATION_OTHER_STYLE"
-            //   )
-            // ]
+            [
+              Response.genWebUrlButton(
+                i18n.__("curation.wash-hands-subtitle"),
+                `https://www.youtube.com/watch?v=y7e8nM0JAz0`
+              ),
+              Response.genPostbackButton(
+                i18n.__("curation.show"),
+                "CURATION_OTHER_STYLE"
+              )
+            ]
           ),  
           Response.genQuickReply(i18n.__("curation.show"), [
             {
