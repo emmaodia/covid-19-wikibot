@@ -164,14 +164,14 @@ module.exports = class Profile {
             {
               title: i18n.__("menu.help"),
               type: "postback",
-              payload: "CARE_HELP"
+              payload: "CURATION"
             }
           ]
         },
         {
           title: i18n.__("menu.suggestion"),
           type: "postback",
-          payload: "CURATION"
+          payload: "CARE_HELP"
         },
         {
           type: "web_url",
