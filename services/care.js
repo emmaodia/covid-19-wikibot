@@ -57,6 +57,16 @@ module.exports = class Care {
               //agentFirstName: config.personaOrder.name,
               //topic: i18n.__("care.order")
             }),
+            [
+              {
+                title: i18n.__("care.billing"),
+                payload: "CARE_BILLING"
+              },
+              {
+                title: i18n.__("care.other"),
+                payload: "CARE_OTHER"
+              }
+            ]
             //config.personaOrder.id
           ),
           // Response.genTextWithPersona(
