@@ -33,9 +33,8 @@ const typingOff = (recipientId) => {
 };
 
 module.exports = class Response {
-  static genQuickReply(sender_action, text, quickReplies) {
+  static genQuickReply(text, quickReplies) {
     let response = {
-      sender_action: typing_on,
       text: text,
       quick_replies: []
     };
