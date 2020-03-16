@@ -53,6 +53,7 @@ module.exports = class Response {
 
   static genGenericTemplate(image_url, title, subtitle, buttons) {
     let response = {
+      sender_action: typing_on,
       attachment: {
         type: "template",
         payload: {
