@@ -4,8 +4,8 @@
  * This source code is licensed under the BSD-style license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * Messenger For Original Coast Clothing
- * https://developers.facebook.com/docs/messenger-platform/getting-started/sample-apps/original-coast-clothing
+ * Messenger For Covid-19- WIKI Bot
+ * Welcome to Covid-19 WIKI Bot. We provide helpful information about the Corona Virus.
  */
 
 const i18n = require("i18n"),

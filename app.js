@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  *
  * Messenger For Original Coast Clothing
- * https://developers.facebook.com/docs/messenger-platform/getting-started/sample-apps/original-coast-clothing
+ * Welcome to Covid-19 WIKI Bot. We provide helpful information about the Corona Virus.
  */
 
 "use strict";
