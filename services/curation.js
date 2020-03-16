@@ -44,7 +44,7 @@ module.exports = class Curation {
             [
               Response.genWebUrlButton(
                 i18n.__("curation.wash-hands-subtitle"),
-                `https://www.google.com`,
+                `${config.appUrl}/styles/wash-hands-video.mp4`,
               ),
               Response.genPostbackButton(
                 i18n.__("curation.show"),
