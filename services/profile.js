@@ -98,7 +98,7 @@ module.exports = class Profile {
   getGetStarted() {
     return {
       get_started: {
-        payload: "GET_STARTED"
+        payload: "Welcome to Covid-19 WIKI Bot. We provide helpful information about the Corona Virus."
       }
     };
   }
