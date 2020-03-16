@@ -39,6 +39,7 @@ module.exports = class Curation {
           Response.genGenericTemplate(
             `${config.appUrl}/styles/hand-washing-who.jpg`,
             i18n.__("curation.wash-hands"),
+            i18n.__("curation.subtitle"),
             Response.genWebUrlButton(
               i18n.__("curation.wash-hands-subtitle"),
               `${config.appUrl}/styles/wash-hands-video.mp4`,
