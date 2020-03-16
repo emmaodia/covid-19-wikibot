@@ -12,26 +12,6 @@
 
 const i18n = require("../i18n.config");
 
-// Turns typing indicator on.
-const typingOn = (recipientId) => {
-  return {
-    recipient: {
-      id: recipientId,
-    },
-    sender_action: 'typing_on', // eslint-disable-line camelcase
-  };
-};
-
-// Turns typing indicator off.
-const typingOff = (recipientId) => {
-  return {
-    recipient: {
-      id: recipientId,
-    },
-    sender_action: 'typing_off', // eslint-disable-line camelcase
-  };
-};
-
 module.exports = class Response {
   static genQuickReply(text, quickReplies) {
     let response = {
@@ -52,7 +32,6 @@ module.exports = class Response {
 
   static genGenericTemplate(image_url, title, subtitle, buttons) {
     let response = {
-      sender_action: typing_on,
       attachment: {
         type: "template",
         payload: {
