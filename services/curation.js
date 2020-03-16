@@ -44,7 +44,7 @@ module.exports = class Curation {
             [
               Response.genWebUrlButton(
                 i18n.__("curation.wash-hands-subtitle"),
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/y7e8nM0JAz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
+                `https://www.google.com`,
               ),
               Response.genPostbackButton(
                 i18n.__("curation.show"),
