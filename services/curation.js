@@ -39,7 +39,7 @@ module.exports = class Curation {
           Response.genGenericTemplate(
             `${config.appUrl}/styles/hand-washing-who.jpg`,
             i18n.__("curation.wash-hands"),
-            i18n.__("curation.subtitle"),
+            //i18n.__("curation.subtitle"),
             // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
             [
               Response.genWebUrlButton(
@@ -48,17 +48,17 @@ module.exports = class Curation {
               ),
               Response.genPostbackButton(
                 i18n.__("curation.show"),
-                "CURATION_OTHER_STYLE"
+                `${config.shopUrl}`,
               )
             ]
           ),  
           Response.genQuickReply(i18n.__("curation.show"), [
             {
-              title: i18n.__("curation.wash-hands"),
+              title: i18n.__("curation.protect-self"),
               payload: "CURATION_FOR_ME"
             },
             {
-              title: i18n.__("curation.distance"),
+              title: i18n.__("curation.stay-home"),
               payload: "CURATION_SOMEONE_ELSE"
             }
           ]),
