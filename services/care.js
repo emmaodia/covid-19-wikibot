@@ -124,26 +124,42 @@ module.exports = class Care {
       case "CARE_OTHER":
         // Send using the Persona for customer care issues
 
-        response = 
-          Response.genQuickReply(
+        response = [
+          Response.genTextWithPersona(
             i18n.__("curation.prompt", {
               // userFirstName: this.user.firstName,
-              // agentFirstName: config.personaCare.name
-            }),
+              // agentFirstName: config.personaOrder.name,
+              // topic: i18n.__("care.order")
+            })
+            ),
+          Response.genGenericTemplate(
+            `${config.appUrl}/styles/hand-washing-who.jpg`,
+            i18n.__("curation.wash-hands"),
+            i18n.__("curation.subtitle"),
+            // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
             [
-              {
-                title: i18n.__("curation.price"),
-                payload: "Learn More"
-              }
+              Response.genWebUrlButton(
+                i18n.__("curation.wash-hands-subtitle"),
+                `${config.appUrl}/styles/wash-hands-video.mp4`,
+              ),
+              Response.genPostbackButton(
+                i18n.__("curation.show"),
+                "CURATION_OTHER_STYLE"
+              )
             ]
-            // config.personaCare.id
-          );
-          // Response.genTextWithPersona(
-          //   i18n.__("care.end"),
-          //   config.personaCare.id
-          // ),
-          // Survey.genAgentRating(config.personaCare.name)
-        break;
+          ),  
+          Response.genQuickReply(i18n.__("curation.show"), [
+            {
+              title: i18n.__("curation.wash-hands"),
+              payload: "CURATION_FOR_ME"
+            },
+            {
+              title: i18n.__("curation.distance"),
+              payload: "CURATION_SOMEONE_ELSE"
+            }
+          ]),  
+        ]
+      break;
     }
 
     return response;
