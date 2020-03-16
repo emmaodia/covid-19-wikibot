@@ -15,10 +15,10 @@ const i18n = require("../i18n.config");
 module.exports = class Response {
 
     // Turns typing indicator on.
-  static typingOn (recipientId) {
+  static typingOn (persona_id) {
     return {
       recipient: {
-        id: recipientId,
+        persona_id: persona_id,
       },
       sender_action: 'typing_on', // eslint-disable-line camelcase
     };
