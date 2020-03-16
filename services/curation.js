@@ -52,7 +52,7 @@ module.exports = class Curation {
               )
             ]
           ),  
-          Response.genQuickReply(i18n.__("curation.show"), [
+          Response.genQuickReply("Kindly Click any button below to have more answers", [
             {
               title: i18n.__("curation.protect-self"),
               payload: "CURATION_FOR_ME"
