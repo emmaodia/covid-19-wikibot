@@ -125,7 +125,7 @@ module.exports = class Care {
         // Send using the Persona for customer care issues
 
         response = [
-          Response.typingOn,
+          Response.typingOn(this.user),
           Response.genTextWithPersona(
             i18n.__("curation.prompt", {
               // userFirstName: this.user.firstName,
