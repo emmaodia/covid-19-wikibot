@@ -61,14 +61,14 @@ module.exports = class Curation {
               title: i18n.__("curation.stay-home"),
               payload: "CURATION_SOMEONE_ELSE"
             },
-            {
-              title: i18n.__("curation.sales"),
-              payload: "CURATION_SOMEONE_ELSE"
-            },
-            {
-              title: i18n.__("curation.travel"),
-              payload: "CURATION_SOMEONE_ELSE"
-            }
+            // {
+            //   title: i18n.__("curation.sales"),
+            //   payload: "CURATION_SOMEONE_ELSE"
+            // },
+            // {
+            //   title: i18n.__("curation.travel"),
+            //   payload: "CURATION_SOMEONE_ELSE"
+            // }
           ]),
         ]
         break;
