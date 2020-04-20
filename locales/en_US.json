@@ -1,6 +1,6 @@
 {
   "profile": {
-    "greeting": "Hi {{userFirstName}}! Welcome to Covid-19 WIKI Bot. We provide helpful information about the Corona Virus."
+    "greeting": "Welcome to Covid-19 WIKI Bot. We provide helpful information about the Corona Virus."
   },
   "menu": {
     "support": "Protect Yourself",
@@ -17,17 +17,13 @@
   },
   "curation": {
     "prompt": "Studies to date suggest that the virus that causes COVID-19 is mainly transmitted through contact with respiratory droplets rather than through the air.",
-    "protect-self": "Keep Distance",
+    "protect-self": "How to Protect yourself.",
     "wash-hands": "Wash Hands thoroughly with Soap and Water!",
     "distance": "You can reduce your chances of being infected or spreading COVID-19 by taking some simple precautions:",
     "dont-touch": "Someone else",
     "respiration": "Work",
-    "stay-home": "Self Isolation",
+    "stay-home": "Myths",
     "stay-update": "Party",
-    "sales": "Myths",
-    "travel": "Travel Advice",
-    "shop": "Shop this look",
-    "title": "Summer collection 2019",
     "wash-hands-subtitle": "Watch a Video",
     "subtitle" : "Wash hands often.",
     "show": "WHO Website"
