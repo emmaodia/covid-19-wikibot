@@ -75,7 +75,32 @@ module.exports = class Curation {
 
       case "CURATION_FOR_ME":
       case "CURATION_SOMEONE_ELSE":
-        response = Response.genQuickReply(i18n.__("curation.occasion"), [
+        response =  [
+          Response.genTextWithPersona(
+          i18n.__("curation.prompt", {
+            // userFirstName: this.user.firstName,
+            // agentFirstName: config.personaOrder.name,
+            // topic: i18n.__("care.order")
+          })
+          ),
+        Response.genGenericTemplate(
+          `${config.appUrl}/styles/hand-washing-who.jpg`,
+          i18n.__("curation.wash-hands"),
+          i18n.__("curation.subtitle"),
+          // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
+          [
+            Response.genWebUrlButton(
+              i18n.__("curation.wash-hands-subtitle"),
+              `${config.appUrl}/styles/wash-hands-video.mp4`,
+            ),
+            Response.genPostbackButton(
+              i18n.__("curation.show"),
+              `${config.shopUrl}`,
+            )
+          ]
+        ),  
+        
+        Response.genQuickReply(i18n.__("curation.occasion"), [
           {
             title: i18n.__("curation.work"),
             payload: "CURATION_OCASION_WORK"
@@ -92,7 +117,8 @@ module.exports = class Curation {
             title: i18n.__("curation.sales"),
             payload: "CARE_SALES"
           }
-        ]);
+        ])
+      ]
         break;
 
       case "CURATION_OCASION_WORK":

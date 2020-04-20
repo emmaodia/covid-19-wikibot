@@ -17,7 +17,7 @@
   },
   "curation": {
     "prompt": "Studies to date suggest that the virus that causes COVID-19 is mainly transmitted through contact with respiratory droplets rather than through the air.",
-    "protect-self": "Protect yourself.",
+    "protect-self": "Protect yourself",
     "wash-hands": "Wash Hands thoroughly with Soap and Water!",
     "distance": "You can reduce your chances of being infected or spreading COVID-19 by taking some simple precautions:",
     "dont-touch": "Someone else",
@@ -25,7 +25,7 @@
     "stay-home": "Myths",
     "stay-update": "Infection Numbers",
     "wash-hands-subtitle": "Watch a Video",
-    "subtitle" : "Wash hands often.",
+    "subtitle" : "Wash hands often",
     "show": "WHO Website",
     "occasion": "It is highly emphasized at this time to stay at home to avoid getting infected and thus reducing the spread.",
     "work": "Check Symptoms",
