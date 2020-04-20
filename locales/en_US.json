@@ -26,7 +26,12 @@
     "stay-update": "Infection Numbers",
     "wash-hands-subtitle": "Watch a Video",
     "subtitle" : "Wash hands often.",
-    "show": "WHO Website"
+    "show": "WHO Website",
+    "occasion": "It is highly emphasized at this time to stay at home to avoid getting infected and thus reducing the spread.",
+    "work": "Check Symptoms",
+    "dinner": "Indoor Recommendations",
+    "party": "Free Courses",
+    "sales": "Contact CDC"
   },
   "order": {
     "prompt": "We'll be happy to help you. Select from the following",
