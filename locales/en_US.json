@@ -13,7 +13,7 @@
   "get_started": {
     "welcome": "Hi {{userFirstName}}! Welcome to Covid-19 WIKI Bot. We provide helpful information about the Corona Virus.",
     "guidance": "All information presented here is pulled from the WHO website.",
-    "help": "Please ALWAYS use the menu buttons below to navigate the Wiki Bot."
+    "help": "Please ALWAYS use the menu buttons below to navigate the Wiki Bot. Click the FAQs to see the Infection Numbers."
   },
   "curation": {
     "prompt": "Studies to date suggest that the virus that causes COVID-19 is mainly transmitted through contact with respiratory droplets rather than through the air.",
