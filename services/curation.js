@@ -77,7 +77,7 @@ module.exports = class Curation {
       case "CURATION_SOMEONE_ELSE":
         response =  [
           Response.genTextWithPersona(
-          i18n.__("curation.prompt", {
+          i18n.__("curation.protect", {
             // userFirstName: this.user.firstName,
             // agentFirstName: config.personaOrder.name,
             // topic: i18n.__("care.order")
