@@ -86,6 +86,7 @@ module.exports = class Curation {
         Response.genGenericTemplate(
           `${config.appUrl}/styles/be-smart-inform.jpg`,
           i18n.__("curation.be-smart"),
+          i18n.__("curation.subtitle"),
           // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
           [
             Response.genWebUrlButton(
