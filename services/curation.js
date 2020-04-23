@@ -264,14 +264,14 @@ module.exports = class Curation {
           ]
         ),
         Response.genGenericTemplate(
-          `${config.appUrl}/styles/hand-washing-who.jpg`,
+          `${config.appUrl}/styles/hand-washing.jpg`,
           i18n.__("curation.wash-hands"),
           i18n.__("curation.subtitle"),
           // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
           [
             Response.genWebUrlButton(
               i18n.__("curation.wash-hands-subtitle"),
-              `${config.appUrl}/styles/wash-hands-video.mp4`,
+              `${config.appUrl}/styles/wash-hands.mp4`,
             ),
             Response.genWebUrlButton(
               i18n.__("curation.show"),
