@@ -27,12 +27,13 @@
     "wash-hands-subtitle": "Watch a Video",
     "subtitle" : "Wash hands often",
     "show": "WHO Website",
-    "occasion": "Click on any of the buttons below to learn more",
+    "occasion": "The buttons below present you a variety of options that span across activities that could help you in this stay at home period.",
     "work": "Check Symptoms",
+    "price": "Kindly answer as appropriately as you can and then if there's a need the local CDC will be contacted. Thank you.",
     "dinner": "Indoor Recommendations",
     "party": "Free Courses",
     "sales": "Contact CDC",
-    "protect": "It is highly emphasized at this time to stay at home to avoid getting infected and thus reducing the spread."
+    "protect": "It is highly emphasized at this time to stay at home to avoid getting infected and thus reducing the spread. You can click on the link below to "
   },
   "order": {
     "prompt": "We'll be happy to help you. Select from the following",
