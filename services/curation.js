@@ -110,7 +110,7 @@ module.exports = class Curation {
           // },
           {
             title: i18n.__("curation.sales"),
-            payload: "CARE_SALES"
+            payload: "CURATION_BUDGET_20_PARTY"
           }
         ])
       ]
@@ -223,10 +223,32 @@ module.exports = class Curation {
         ]);
         break;
 
+      // case "CARE_CDC":
+      //   response = Response.genQuickReply(i18n.__("care.check"), [
+      //     {
+      //       title: i18n.__("menu.help"),
+      //       payload: "CARE_HELP"
+      //     }
+      //   ]);
+      // break;
+
+      case "CURATION_BUDGET_20_PARTY":
+        response = Response.genQuickReply(i18n.__("care.check"), [
+          {
+            title: "Check Symptoms",
+            payload: "CURATION_BUDGET_20_WORK"
+          },
+          {
+            title: "Contact CDC",
+            payload: "CARE_HELP"
+          }
+        ]);
+      break;
+
       case "CURATION_BUDGET_20_DINNER":
       case "CURATION_BUDGET_30_DINNER":
       case "CURATION_BUDGET_50_DINNER":
-      case "CURATION_BUDGET_20_PARTY":
+      
       case "CURATION_BUDGET_30_PARTY":
       case "CURATION_BUDGET_50_PARTY":
         response = this.genCurationResponse(payload);
@@ -275,7 +297,7 @@ module.exports = class Curation {
 
     if (budget === "50") {
       buttons.push(
-        Response.genPostbackButton(i18n.__("curation.sales"), "CARE_SALES")
+        Response.genPostbackButton(i18n.__("curation.sales"), "CARE_CDC")
       );
     }
 
