@@ -246,6 +246,7 @@ module.exports = class Curation {
       break;
 
       case "CURATION_CONTACT_CDC":
+        [
         response = Response.genGenericTemplate(
           `${config.appUrl}/styles/hand-washing-who.jpg`,
           i18n.__("curation.wash-hands"),
@@ -261,7 +262,24 @@ module.exports = class Curation {
               `${config.shopUrl}`,
             )
           ]
-        );  
+        ),
+        Response.genGenericTemplate(
+          `${config.appUrl}/styles/hand-washing-who.jpg`,
+          i18n.__("curation.wash-hands"),
+          i18n.__("curation.subtitle"),
+          // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
+          [
+            Response.genWebUrlButton(
+              i18n.__("curation.wash-hands-subtitle"),
+              `${config.appUrl}/styles/wash-hands-video.mp4`,
+            ),
+            Response.genWebUrlButton(
+              i18n.__("curation.show"),
+              `${config.shopUrl}`,
+            )
+          ]
+        )
+      ];  
       break;
 
       case "CURATION_BUDGET_20_DINNER":
