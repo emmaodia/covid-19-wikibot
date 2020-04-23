@@ -74,7 +74,6 @@ module.exports = class Curation {
         break;
 
       case "CURATION_FOR_ME":
-      case "CURATION_SOMEONE_ELSE":
         response =  [
           Response.genTextWithPersona(
           i18n.__("curation.protect", {
@@ -115,6 +114,25 @@ module.exports = class Curation {
           }
         ])
       ]
+        break;
+
+      case "CURATION_SOMEONE_ELSE":
+        response = Response.genGenericTemplate(
+          `${config.appUrl}/styles/myths.jpg`,
+          i18n.__("curation.be-smart"),
+          i18n.__("curation.subtitle"),
+          // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
+          [
+            Response.genWebUrlButton(
+              i18n.__("curation.wash-hands-subtitle"),
+              `${config.appUrl}/styles/myths.mp4`,
+            ),
+            Response.genPostbackButton(
+              i18n.__("curation.show"),
+              `${config.shopUrl}/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters`,
+            )
+          ]
+        );
         break;
 
       case "CURATION_OCASION_WORK":
