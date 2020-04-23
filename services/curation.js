@@ -246,8 +246,8 @@ module.exports = class Curation {
       break;
 
       case "CURATION_CONTACT_CDC":
-        [
-        response = Response.genGenericTemplate(
+        response = [
+        Response.genGenericTemplate(
           `${config.appUrl}/styles/hand-washing-who.jpg`,
           i18n.__("curation.wash-hands"),
           i18n.__("curation.subtitle"),
