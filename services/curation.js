@@ -240,12 +240,12 @@ module.exports = class Curation {
           },
           {
             title: "Contact CDC",
-            payload: "CONTACT_CDC"
+            payload: "CURATION_CONTACT_CDC"
           }
         ]);
       break;
 
-      case "CONTACT_CDC":
+      case "CURATION_CONTACT_CDC":
         response = Response.genGenericTemplate(
           `${config.appUrl}/styles/hand-washing-who.jpg`,
           i18n.__("curation.wash-hands"),
