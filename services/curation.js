@@ -148,7 +148,7 @@ module.exports = class Curation {
         response = Response.genQuickReply(i18n.__("curation.fever"), [
           {
             title: "YES",
-            payload: "CURATION_BUDGET_30_DINNER"
+            payload: "CURATION_OCASION_DINNER"
           },
           {
             title: "No",
