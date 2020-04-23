@@ -84,18 +84,13 @@ module.exports = class Curation {
           })
           ),
         Response.genGenericTemplate(
-          `${config.appUrl}/styles/hand-washing-who.jpg`,
-          i18n.__("curation.wash-hands"),
-          i18n.__("curation.subtitle"),
+          `${config.appUrl}/styles/be-smart-inform.jpg`,
+          i18n.__("curation.be-smart"),
           // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
           [
             Response.genWebUrlButton(
               i18n.__("curation.wash-hands-subtitle"),
-              `${config.appUrl}/styles/wash-hands-video.mp4`,
-            ),
-            Response.genPostbackButton(
-              i18n.__("curation.show"),
-              `${config.shopUrl}`,
+              `${config.appUrl}/styles/covid19.mp4`,
             )
           ]
         ),  
