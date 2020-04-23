@@ -101,14 +101,14 @@ module.exports = class Curation {
             title: i18n.__("curation.work"),
             payload: "CURATION_OCASION_WORK"
           },
-          {
-            title: i18n.__("curation.dinner"),
-            payload: "CURATION_OCASION_DINNER"
-          },
-          {
-            title: i18n.__("curation.party"),
-            payload: "CURATION_OCASION_PARTY"
-          },
+          // {
+          //   title: i18n.__("curation.dinner"),
+          //   payload: "CURATION_OCASION_DINNER"
+          // },
+          // {
+          //   title: i18n.__("curation.party"),
+          //   payload: "CURATION_OCASION_PARTY"
+          // },
           {
             title: i18n.__("curation.sales"),
             payload: "CARE_SALES"
