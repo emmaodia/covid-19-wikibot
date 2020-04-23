@@ -36,6 +36,9 @@
     "fine": "You are in the clear. Let's go back to the FAQs",
     "symptoms": "Do you have any of the following symptoms: cough, sore throat, congestion, or runny nose?",
     "fever": "Do you have a fever or body aches and did you have flu-like symptoms at the same time with at least 4 other people, after having been to the same place in the past week?",
+    "travel": "Have you traveled abroad in the last Six weeks?",
+    "crowd" : "o you work with tourist or have to stay in crowded place or have to meet with a lot of people and visit ny public place such as market, hospital, public transportation in the past six weeks?",
+    "contact": "Have you ever been in physical contact with anyone who has diagnosed with having a COVID-19?",
     "protect": "It is highly emphasized at this time to stay at home to avoid getting infected and thus reducing the spread. You can click on the link below to "
   },
   "order": {

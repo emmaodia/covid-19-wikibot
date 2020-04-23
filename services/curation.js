@@ -125,52 +125,8 @@ module.exports = class Curation {
         // Store the user budget preference here
         response = Response.genQuickReply(i18n.__("curation.price"), [
           {
-            title: "~ $20",
+            title: "Start",
             payload: "CURATION_BUDGET_20_WORK"
-          },
-          {
-            title: "~ $30",
-            payload: "CURATION_BUDGET_30_WORK"
-          },
-          {
-            title: "+ $50",
-            payload: "CURATION_BUDGET_50_WORK"
-          }
-        ]);
-        break;
-
-      case "CURATION_OCASION_DINNER":
-        // Store the user budget preference here
-        response = Response.genQuickReply(i18n.__("curation.price"), [
-          {
-            title: "~ $20",
-            payload: "CURATION_BUDGET_20_DINNER"
-          },
-          {
-            title: "~ $30",
-            payload: "CURATION_BUDGET_30_DINNER"
-          },
-          {
-            title: "+ $50",
-            payload: "CURATION_BUDGET_50_DINNER"
-          }
-        ]);
-        break;
-
-      case "CURATION_OCASION_PARTY":
-        // Store the user budget preference here
-        response = Response.genQuickReply(i18n.__("curation.price"), [
-          {
-            title: "~ $20",
-            payload: "CURATION_BUDGET_20_PARTY"
-          },
-          {
-            title: "~ $30",
-            payload: "CURATION_BUDGET_30_PARTY"
-          },
-          {
-            title: "+ $50",
-            payload: "CURATION_BUDGET_50_PARTY"
           }
         ]);
         break;
@@ -192,7 +148,7 @@ module.exports = class Curation {
         response = Response.genQuickReply(i18n.__("curation.fever"), [
           {
             title: "YES",
-            payload: "CURATION_BUDGET_30_WORK"
+            payload: "CURATION_BUDGET_30_DINNER"
           },
           {
             title: "No",
@@ -201,11 +157,54 @@ module.exports = class Curation {
         ]);
         break;
 
+        case "CURATION_OCASION_DINNER":
+          // Store the user budget preference here
+          response = Response.genQuickReply(i18n.__("curation.travel"), [
+            {
+              title: "Yes",
+              payload: "CURATION_BUDGET_20_DINNER"
+            },
+            {
+              title: "No",
+              payload: "CURATION_BUDGET_50_WORK"
+            }
+          ]);
+          break;
+  
+        case "CURATION_OCASION_PARTY":
+          // Store the user budget preference here
+          response = Response.genQuickReply(i18n.__("curation.crowd"), [
+            {
+              title: "Yes",
+              payload: "CURATION_BUDGET_20_PARTY"
+            },
+            {
+              title: "No",
+              payload: "CURATION_BUDGET_50_WORK"
+            }
+          ]);
+          break;
+
+          case "CURATION_OCASION_HOME":
+            // Store the user budget preference here
+            response = Response.genQuickReply(i18n.__("curation.contact"), [
+              {
+                title: "Contact CDC",
+                payload: "CURATION_BUDGET_20_PARTY"
+              },
+              {
+                title: "No",
+                payload: "CURATION_BUDGET_50_WORK"
+              }
+            ]);
+            break;
+    
+
       case "CURATION_BUDGET_50_WORK":
         response = Response.genQuickReply(i18n.__("curation.fine"), [
           {
-            title: "FAQs",
-            //payload: "CURATION_BUDGET_30_WORK"
+            title: i18n.__("menu.help"),
+            payload: "CARE_HELP"
           }
         ]);
         break;
