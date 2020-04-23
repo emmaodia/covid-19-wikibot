@@ -46,7 +46,7 @@ module.exports = class Curation {
                 i18n.__("curation.wash-hands-subtitle"),
                 `${config.appUrl}/styles/wash-hands-video.mp4`,
               ),
-              Response.genPostbackButton(
+              Response.genWebUrlButton(
                 i18n.__("curation.show"),
                 `${config.shopUrl}`,
               )
@@ -127,7 +127,7 @@ module.exports = class Curation {
               i18n.__("curation.wash-hands-subtitle"),
               `${config.appUrl}/styles/myths.mp4`,
             ),
-            Response.genPostbackButton(
+            Response.genWebUrlButton(
               i18n.__("curation.show"),
               `${config.shopUrl}/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters`,
             )
