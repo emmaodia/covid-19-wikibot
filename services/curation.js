@@ -162,7 +162,7 @@ module.exports = class Curation {
           response = Response.genQuickReply(i18n.__("curation.travel"), [
             {
               title: "Yes",
-              payload: "CURATION_BUDGET_20_DINNER"
+              payload: "CURATION_OCASION_PARTY"
             },
             {
               title: "No",
@@ -176,7 +176,7 @@ module.exports = class Curation {
           response = Response.genQuickReply(i18n.__("curation.crowd"), [
             {
               title: "Yes",
-              payload: "CURATION_BUDGET_20_PARTY"
+              payload: "CURATION_OCASION_HOME"
             },
             {
               title: "No",
