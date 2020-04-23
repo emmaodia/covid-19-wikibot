@@ -33,6 +33,9 @@
     "dinner": "Indoor Recommendations",
     "party": "Free Courses",
     "sales": "Contact CDC",
+    "fine": "You are in the clear. Let's go back to the FAQs",
+    "symptoms": "Do you have any of the following symptoms: cough, sore throat, congestion, or runny nose?",
+    "fever": "Do you have a fever or body aches and did you have flu-like symptoms at the same time with at least 4 other people, after having been to the same place in the past week?",
     "protect": "It is highly emphasized at this time to stay at home to avoid getting infected and thus reducing the spread. You can click on the link below to "
   },
   "order": {

@@ -176,8 +176,40 @@ module.exports = class Curation {
         break;
 
       case "CURATION_BUDGET_20_WORK":
+        response = Response.genQuickReply(i18n.__("curation.symptoms"), [
+          {
+            title: "YES",
+            payload: "CURATION_BUDGET_30_WORK"
+          },
+          {
+            title: "No",
+            payload: "CURATION_BUDGET_50_WORK"
+          }
+        ]);
+        break;
+
       case "CURATION_BUDGET_30_WORK":
+        response = Response.genQuickReply(i18n.__("curation.fever"), [
+          {
+            title: "YES",
+            payload: "CURATION_BUDGET_30_WORK"
+          },
+          {
+            title: "No",
+            payload: "CURATION_BUDGET_50_WORK"
+          }
+        ]);
+        break;
+
       case "CURATION_BUDGET_50_WORK":
+        response = Response.genQuickReply(i18n.__("curation.fine"), [
+          {
+            title: "FAQs",
+            //payload: "CURATION_BUDGET_30_WORK"
+          }
+        ]);
+        break;
+
       case "CURATION_BUDGET_20_DINNER":
       case "CURATION_BUDGET_30_DINNER":
       case "CURATION_BUDGET_50_DINNER":
