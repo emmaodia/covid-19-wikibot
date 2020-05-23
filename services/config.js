@@ -131,7 +131,14 @@ module.exports = {
         console.log("WARNING: Missing the environment variable " + key);
       } else {
         // Check that urls use https
-        if (["YOU_TUBE_WASH_HANDS", "APP_URL", "SHOP_URL"].includes(key)) {
+        if (
+          [
+            "YOU_TUBE_WASH_HANDS",
+            "APP_URL",
+            "SHOP_URL",
+            "NUMBERS_URL"
+          ].includes(key)
+        ) {
           const url = process.env[key];
           if (!url.startsWith("https://")) {
             console.log(
