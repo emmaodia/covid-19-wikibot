@@ -26,7 +26,6 @@ module.exports = class Curation {
     let outfit;
 
     switch (payload) {
-      
       case "CURATION":
         response = [
           Response.genTextWithPersona(
@@ -35,7 +34,7 @@ module.exports = class Curation {
               // agentFirstName: config.personaOrder.name,
               // topic: i18n.__("care.order")
             })
-            ),
+          ),
           Response.genGenericTemplate(
             `${config.appUrl}/styles/hand-washing-who.jpg`,
             i18n.__("curation.wash-hands"),
@@ -44,76 +43,79 @@ module.exports = class Curation {
             [
               Response.genWebUrlButton(
                 i18n.__("curation.wash-hands-subtitle"),
-                `${config.appUrl}/styles/wash-hands-video.mp4`,
+                `${config.appUrl}/styles/wash-hands-video.mp4`
               ),
               Response.genWebUrlButton(
                 i18n.__("curation.show"),
-                `${config.shopUrl}`,
+                `${config.shopUrl}`
               )
             ]
-          ),  
-          Response.genQuickReply("Kindly Click any button below to have more answers", [
-            {
-              title: i18n.__("curation.protect-self"),
-              payload: "CURATION_FOR_ME"
-            },
-            {
-              title: i18n.__("curation.stay-home"),
-              payload: "CURATION_SOMEONE_ELSE"
-            },
-            {
-              title: i18n.__("curation.stay-update"),
-              payload: "CURATION_SOMEONE_ELSE"
-            }
-            // {
-            //   title: i18n.__("curation.travel"),
-            //   payload: "CURATION_SOMEONE_ELSE"
-            // }
-          ]),
-        ]
+          ),
+          Response.genQuickReply(
+            "Kindly Click any button below to have more answers",
+            [
+              {
+                title: i18n.__("curation.protect-self"),
+                payload: "CURATION_FOR_ME"
+              },
+              {
+                title: i18n.__("curation.stay-home"),
+                payload: "CURATION_SOMEONE_ELSE"
+              },
+              {
+                title: i18n.__("curation.stay-update"),
+                payload: "CURATION_SOMEONE_EL"
+              }
+              // {
+              //   title: i18n.__("curation.travel"),
+              //   payload: "CURATION_SOMEONE_ELSE"
+              // }
+            ]
+          )
+        ];
         break;
 
       case "CURATION_FOR_ME":
-        response =  [
+        response = [
           Response.genTextWithPersona(
-          i18n.__("curation.protect", {
-            // userFirstName: this.user.firstName,
-            // agentFirstName: config.personaOrder.name,
-            // topic: i18n.__("care.order")
-          })
+            i18n.__("curation.protect", {
+              // userFirstName: this.user.firstName,
+              // agentFirstName: config.personaOrder.name,
+              // topic: i18n.__("care.order")
+            })
           ),
-        Response.genGenericTemplate(
-          `${config.appUrl}/styles/be-smart-inform.jpg`,
-          i18n.__("curation.be-smart"),
-          i18n.__("curation.subtitle"),
-          // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
-          [
-            Response.genWebUrlButton(
-              i18n.__("curation.wash-hands-subtitle"),
-              `${config.appUrl}/styles/covid19.mp4`,
-            )
-          ]
-        ),  
-        
-        Response.genQuickReply(i18n.__("curation.occasion"), [
-          {
-            title: i18n.__("curation.work"),
-            payload: "CURATION_OCASION_WORK"
-          },
-          // {
-          //   title: i18n.__("curation.dinner"),
-          //   payload: "CURATION_OCASION_DINNER"
-          // },
-          // {
-          //   title: i18n.__("curation.party"),
-          //   payload: "CURATION_OCASION_PARTY"
-          // },
-          {
-            title: i18n.__("curation.sales"),
-            payload: "CURATION_BUDGET_20_PARTY"
-          }
-        ])
-      ]
+          Response.genGenericTemplate(
+            `${config.appUrl}/styles/be-smart-inform.jpg`,
+            i18n.__("curation.be-smart"),
+            i18n.__("curation.subtitle"),
+            // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
+            [
+              Response.genWebUrlButton(
+                i18n.__("curation.wash-hands-subtitle"),
+                `${config.appUrl}/styles/covid19.mp4`
+              )
+            ]
+          ),
+
+          Response.genQuickReply(i18n.__("curation.occasion"), [
+            {
+              title: i18n.__("curation.work"),
+              payload: "CURATION_OCASION_WORK"
+            },
+            // {
+            //   title: i18n.__("curation.dinner"),
+            //   payload: "CURATION_OCASION_DINNER"
+            // },
+            // {
+            //   title: i18n.__("curation.party"),
+            //   payload: "CURATION_OCASION_PARTY"
+            // },
+            {
+              title: i18n.__("curation.sales"),
+              payload: "CURATION_BUDGET_20_PARTY"
+            }
+          ])
+        ];
         break;
 
       case "CURATION_SOMEONE_ELSE":
@@ -125,11 +127,30 @@ module.exports = class Curation {
           [
             Response.genWebUrlButton(
               i18n.__("curation.wash-hands-subtitle"),
-              `${config.appUrl}/styles/myths.mp4`,
+              `${config.appUrl}/styles/myths.mp4`
             ),
             Response.genWebUrlButton(
               i18n.__("curation.show"),
-              `${config.shopUrl}/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters`,
+              `${config.shopUrl}/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters`
+            )
+          ]
+        );
+        break;
+
+      case "CURATION_SOMEONE_EL":
+        response = Response.genGenericTemplate(
+          `${config.appUrl}/styles/myths.jpg`,
+          i18n.__("curation.be-smart"),
+          i18n.__("curation.subtitle"),
+          // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
+          [
+            Response.genWebUrlButton(
+              i18n.__("curation.wash-hands-subtitle"),
+              `${config.numbersUrl}/styles/myths.mp4`
+            ),
+            Response.genWebUrlButton(
+              i18n.__("curation.show"),
+              `${config.shopUrl}/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters`
             )
           ]
         );
@@ -171,48 +192,47 @@ module.exports = class Curation {
         ]);
         break;
 
-        case "CURATION_OCASION_DINNER":
-          // Store the user budget preference here
-          response = Response.genQuickReply(i18n.__("curation.travel"), [
-            {
-              title: "Yes",
-              payload: "CURATION_OCASION_PARTY"
-            },
-            {
-              title: "No",
-              payload: "CURATION_BUDGET_50_WORK"
-            }
-          ]);
-          break;
-  
-        case "CURATION_OCASION_PARTY":
-          // Store the user budget preference here
-          response = Response.genQuickReply(i18n.__("curation.crowd"), [
-            {
-              title: "Yes",
-              payload: "CURATION_OCASION_HOME"
-            },
-            {
-              title: "No",
-              payload: "CURATION_BUDGET_50_WORK"
-            }
-          ]);
-          break;
+      case "CURATION_OCASION_DINNER":
+        // Store the user budget preference here
+        response = Response.genQuickReply(i18n.__("curation.travel"), [
+          {
+            title: "Yes",
+            payload: "CURATION_OCASION_PARTY"
+          },
+          {
+            title: "No",
+            payload: "CURATION_BUDGET_50_WORK"
+          }
+        ]);
+        break;
 
-          case "CURATION_OCASION_HOME":
-            // Store the user budget preference here
-            response = Response.genQuickReply(i18n.__("curation.contact"), [
-              {
-                title: "Contact CDC",
-                payload: "CURATION_BUDGET_20_PARTY"
-              },
-              {
-                title: "No",
-                payload: "CURATION_BUDGET_50_WORK"
-              }
-            ]);
-            break;
-    
+      case "CURATION_OCASION_PARTY":
+        // Store the user budget preference here
+        response = Response.genQuickReply(i18n.__("curation.crowd"), [
+          {
+            title: "Yes",
+            payload: "CURATION_OCASION_HOME"
+          },
+          {
+            title: "No",
+            payload: "CURATION_BUDGET_50_WORK"
+          }
+        ]);
+        break;
+
+      case "CURATION_OCASION_HOME":
+        // Store the user budget preference here
+        response = Response.genQuickReply(i18n.__("curation.contact"), [
+          {
+            title: "Contact CDC",
+            payload: "CURATION_BUDGET_20_PARTY"
+          },
+          {
+            title: "No",
+            payload: "CURATION_BUDGET_50_WORK"
+          }
+        ]);
+        break;
 
       case "CURATION_BUDGET_50_WORK":
         response = Response.genQuickReply(i18n.__("curation.fine"), [
@@ -243,79 +263,79 @@ module.exports = class Curation {
             payload: "CURATION_CONTACT_CDC"
           }
         ]);
-      break;
+        break;
 
       case "CURATION_CONTACT_CDC":
         response = [
           Response.genGenericTemplate(
-          `${config.appUrl}/styles/hand-washing-who.jpg`,
-          i18n.__("curation.wash-hands"),
-          i18n.__("curation.subtitle"),
-          // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
-          [
-            Response.genWebUrlButton(
-              i18n.__("curation.wash-hands-subtitle"),
-              `${config.appUrl}/styles/wash-hands-video.mp4`,
-            ),
-            Response.genWebUrlButton(
-              i18n.__("curation.show"),
-              `${config.shopUrl}`,
-            )
-          ],
-          `${config.appUrl}/styles/hand-washing-who.jpg`,
-          i18n.__("curation.wash-hands"),
-          i18n.__("curation.subtitle"),
-          // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
-          [
-            Response.genWebUrlButton(
-              i18n.__("curation.wash-hands-subtitle"),
-              `${config.appUrl}/styles/wash-hands-video.mp4`,
-            ),
-            Response.genWebUrlButton(
-              i18n.__("curation.show"),
-              `${config.shopUrl}`,
-            )
-          ]
-        ),
-        Response.genGenericTemplate(
-          `${config.appUrl}/styles/hand-washing.jpg`,
-          i18n.__("curation.wash-hands"),
-          i18n.__("curation.subtitle"),
-          // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
-          [
-            Response.genWebUrlButton(
-              i18n.__("curation.wash-hands-subtitle"),
-              `${config.appUrl}/styles/wash-hands.mp4`,
-            ),
-            Response.genWebUrlButton(
-              i18n.__("curation.show"),
-              `${config.shopUrl}`,
-            )
-          ]
-        ),
-        Response.genGenericTemplate(
-          `${config.appUrl}/styles/hand-washing.jpg`,
-          i18n.__("curation.wash-hands"),
-          i18n.__("curation.subtitle"),
-          // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
-          [
-            Response.genWebUrlButton(
-              i18n.__("curation.wash-hands-subtitle"),
-              `${config.appUrl}/styles/wash-hands.mp4`,
-            ),
-            Response.genWebUrlButton(
-              i18n.__("curation.show"),
-              `${config.shopUrl}`,
-            )
-          ]
-        )
-      ];  
-      break;
+            `${config.appUrl}/styles/hand-washing-who.jpg`,
+            i18n.__("curation.wash-hands"),
+            i18n.__("curation.subtitle"),
+            // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
+            [
+              Response.genWebUrlButton(
+                i18n.__("curation.wash-hands-subtitle"),
+                `${config.appUrl}/styles/wash-hands-video.mp4`
+              ),
+              Response.genWebUrlButton(
+                i18n.__("curation.show"),
+                `${config.shopUrl}`
+              )
+            ],
+            `${config.appUrl}/styles/hand-washing-who.jpg`,
+            i18n.__("curation.wash-hands"),
+            i18n.__("curation.subtitle"),
+            // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
+            [
+              Response.genWebUrlButton(
+                i18n.__("curation.wash-hands-subtitle"),
+                `${config.appUrl}/styles/wash-hands-video.mp4`
+              ),
+              Response.genWebUrlButton(
+                i18n.__("curation.show"),
+                `${config.shopUrl}`
+              )
+            ]
+          ),
+          Response.genGenericTemplate(
+            `${config.appUrl}/styles/hand-washing.jpg`,
+            i18n.__("curation.wash-hands"),
+            i18n.__("curation.subtitle"),
+            // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
+            [
+              Response.genWebUrlButton(
+                i18n.__("curation.wash-hands-subtitle"),
+                `${config.appUrl}/styles/wash-hands.mp4`
+              ),
+              Response.genWebUrlButton(
+                i18n.__("curation.show"),
+                `${config.shopUrl}`
+              )
+            ]
+          ),
+          Response.genGenericTemplate(
+            `${config.appUrl}/styles/hand-washing.jpg`,
+            i18n.__("curation.wash-hands"),
+            i18n.__("curation.subtitle"),
+            // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
+            [
+              Response.genWebUrlButton(
+                i18n.__("curation.wash-hands-subtitle"),
+                `${config.appUrl}/styles/wash-hands.mp4`
+              ),
+              Response.genWebUrlButton(
+                i18n.__("curation.show"),
+                `${config.shopUrl}`
+              )
+            ]
+          )
+        ];
+        break;
 
       case "CURATION_BUDGET_20_DINNER":
       case "CURATION_BUDGET_30_DINNER":
       case "CURATION_BUDGET_50_DINNER":
-      
+
       case "CURATION_BUDGET_30_PARTY":
       case "CURATION_BUDGET_50_PARTY":
         response = this.genCurationResponse(payload);
