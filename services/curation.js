@@ -145,8 +145,8 @@ module.exports = class Curation {
           // `https://www.youtube.com/watch?v=y7e8nM0JAz0`,
           [
             Response.genWebUrlButton(
-              i18n.__("curation.wash-hands-subtitle"),
-              `${config.numbersUrl}/styles/myths.mp4`
+              i18n.__("curation.infection-numbers"),
+              `${config.numbersUrl}`
             ),
             Response.genWebUrlButton(
               i18n.__("curation.show"),
