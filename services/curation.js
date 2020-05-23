@@ -64,7 +64,7 @@ module.exports = class Curation {
               },
               {
                 title: i18n.__("curation.stay-update"),
-                payload: "CURATION_SOMEONE_EL"
+                payload: "CURATION_NUMBERS"
               }
               // {
               //   title: i18n.__("curation.travel"),
@@ -137,7 +137,7 @@ module.exports = class Curation {
         );
         break;
 
-      case "CURATION_SOMEONE_EL":
+      case "CURATION_NUMBERS":
         response = Response.genGenericTemplate(
           `${config.appUrl}/styles/myths.jpg`,
           i18n.__("curation.be-smart"),
