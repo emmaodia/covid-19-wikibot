@@ -22,7 +22,8 @@ const ENV_VARS = [
   "VERIFY_TOKEN",
   "YOU_TUBE_WASH_HANDS",
   "APP_URL",
-  "SHOP_URL"
+  "SHOP_URL",
+  "NUMBERS_URL"
 ];
 
 module.exports = {
@@ -44,6 +45,9 @@ module.exports = {
 
   // URL of your website
   shopUrl: process.env.SHOP_URL,
+
+  //number infected url
+  numbersUrl: process.env.NUMBERS_URL,
 
   // Persona IDs
   personas: {},
@@ -118,7 +122,7 @@ module.exports = {
   },
 
   get whitelistedDomains() {
-    return [this.youtubeWashHands, this.appUrl, this.shopUrl];
+    return [this.youtubeWashHands, this.appUrl, this.shopUrl, this.numbersUrl];
   },
 
   checkEnvVariables: function() {
